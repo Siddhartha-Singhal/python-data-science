@@ -17,7 +17,7 @@ snum = c2.number_input('Second number', value = 0)
 options = ['Addition', 'Substraction', 'Multiplication', 'Division']
 
 # make a radio options box
-choice = st.radio('Select options', options)
+choice = st.radio('Select operation:', options)
 
 # button on which after clicking an action becomes
 button = st.button('Calculate')
@@ -33,6 +33,6 @@ if button:
         result = fnum * snum
     if choice == 'Division':
         result = fnum / snum
-
+        
 # success is green color, warning is yellow color, of box
 st.success(f"Result: {result}")
